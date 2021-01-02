@@ -1,0 +1,48 @@
+//Font awesome
+$fa-font-path: '../../dist/fonts';
+@import '../../node_modules/font-awesome/scss/font-awesome';
+
+// Font weights
+$light: 300;
+$regular: 400;
+$bold: 700;
+$extra-bold: 900;
+
+// Base Font
+$base-font-color: $primary-color;
+$base-font-family: 'Lato', sans-serif;
+$base-font-weight: $regular;
+$base-font-size: 14px;
+$base-line-height: 1.4;
+
+
+body {
+    background-color: $bg-color;
+    color: $base-font-color;
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    font-weight: $base-font-weight;
+    line-height: $base-line-height;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-X: hidden;
+
+}
+
+html, body{
+    height: 100%;
+}
+a {
+    color: $base-font-color;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+}
+
+b {
+    font-weight: bold;
+}

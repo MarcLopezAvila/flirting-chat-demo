@@ -1,0 +1,141 @@
+//Mixins
+
+#chat {
+
+    #all-chat-messages {
+        padding-bottom: 100px;
+    }
+
+    .user-image {
+        img {
+            width: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+
+    .messages {
+
+        .message-container {
+            max-width: 600px;
+            margin-bottom: 20px;
+
+            .message {
+                padding: 15px;
+                color: white;
+                margin: 0 60px;
+                border-radius: 3px 0 3px 3px;
+                font-weight: $bold;
+                position: relative;
+
+                &:after {
+                    @extend .arrow;
+                }
+            }
+
+            &.profile-message {
+                float: right;
+
+                .user-image {
+                    position: relative;
+                    cursor: pointer;
+
+                    .status {
+                        position: absolute;
+                        border-radius: 50%;
+                        height: 13px;
+                        width: 13px;
+                        background-color: rgb(118, 184, 88);
+                        right: 3px;
+                        bottom: 5px;
+                    }
+                }
+
+                .message {
+                    background-color: rgb(84, 186, 226);
+
+                    &:after {
+                        right: -10px;
+                        border-color: rgb(84, 186, 226) transparent transparent rgb(84, 186, 226);
+                        border-width: 8px 5px;
+                    }
+                }
+            }
+
+            &.user-message {
+                float: left;
+
+                .message {
+                    background-color: white;
+                    color: $primary-color;
+
+                    &:after {
+                        left: -10px;
+                        border-color: white white transparent transparent;
+                        border-width: 8px 5px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    //Common arrow
+    .arrow {
+        position: absolute;
+        content: '';
+        top: 0;
+        border-style: solid;
+    }
+
+
+    #new-message {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        padding: 10px 20px 10px 25px;
+        background-color: $bg-color;;
+
+        .field {
+            position: relative;
+
+            &:before {
+                @extend .arrow;
+
+                left: -10px;
+                border-color: white white transparent transparent;
+                border-width: 8px 5px;
+            }
+
+            input {
+                -webkit-appearance: none;
+                border: none;
+                background-color: white;
+                width: 100%;
+                display: block;
+                border-radius: 0 3px 3px 3px;
+                padding: 15px;
+                cursor: pointer;
+
+                &::-webkit-input-placeholder {
+                    color: rgb(197, 197, 197);
+                    font-weight: bold;
+                }
+                &:-moz-placeholder {
+                    color: rgb(197, 197, 197);
+                    font-weight: bold;
+                }
+                &:-ms-input-placeholder {
+                    color: rgb(197, 197, 197);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+//If is friend
+.is-my-friend #new-message {
+    background-color: $secondary-color !important;
+}

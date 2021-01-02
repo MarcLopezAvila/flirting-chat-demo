@@ -1,0 +1,13 @@
+body {
+    padding-top: 48px;
+
+    &.is-my-friend {
+        background-color: $secondary-color;
+    }
+}
+
+main {
+    padding: 25px 0;
+    overflow: auto;
+    height: 100%;
+}

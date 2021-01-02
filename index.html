@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+    <title>Flirt App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="icon" href="favicon.png"/>
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+    <!--Links-->
+    <link rel="stylesheet" href="dist/css/style.min.css"/>
+
+    <!--Libs-->
+    <script src="dist/js/app/lib.js"></script>
+
+    <!--App-->
+    <script src="dist/js/app/app.js"></script>
+</head>
+<body ng-cloak ng-controller="mainController" ng-class="{'is-my-friend': isMyFriend}">
+    <ui-view></ui-view>
+</body>
+</html>

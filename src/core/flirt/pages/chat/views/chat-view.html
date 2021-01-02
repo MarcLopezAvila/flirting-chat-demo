@@ -1,0 +1,48 @@
+<main id="chat">
+    <div class="container-fluid">
+        <section class="messages" id="all-chat-messages">
+            <ul>
+                <li class="clearfix" ng-repeat="message in messages track by $index">
+                    <div class="profile-message message-container" ng-if="message.from == 'profile'">
+                        <div class="user-image pull-right" ui-sref="flirt.profile">
+                            <img src="{{profileInfo.image}}">
+                            <span class="status"></span>
+                        </div>
+                        <div class="message">
+                            <p>{{message.msg}}</p>
+                        </div>
+                    </div>
+
+                    <div class="user-message message-container" ng-if="message.from == 'user'">
+                        <div class="user-image pull-left">
+                            <img src="{{userInfo.image}}">
+                        </div>
+                        <div class="message">
+                            <p>{{message.msg}}</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="clearfix" ng-if="writing">
+                    <div class="profile-message message-container">
+                        <div class="user-image pull-right" ui-sref="flirt.profile">
+                            <img src="{{profileInfo.image}}">
+                            <span class="status"></span>
+                        </div>
+                        <div class="message">
+                            <p>Writing...</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <div id="new-message">
+            <form name="chatForm" ng-submit="newMessage(chatForm)" novalidate>
+                <div class="field">
+                    <input name="user-message" ng-model="theMessage" placeholder="Write a new message" required/>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

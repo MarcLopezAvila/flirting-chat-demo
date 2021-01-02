@@ -1,0 +1,23 @@
+{
+  "name": "flirt-app",
+  "version": "1.0.0",
+  "description": "Flirting app",
+  "author": "Marc López Ávila",
+  "scripts": {
+    "start": "grunt init",
+    "start-app": "grunt app"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-ui-router": "^0.4.2",
+    "font-awesome": "^4.7.0",
+    "mavi-grid": "*",
+    "ngstorage": "^0.3.11"
+  }
+}

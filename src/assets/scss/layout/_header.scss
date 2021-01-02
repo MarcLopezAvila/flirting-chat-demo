@@ -1,0 +1,29 @@
+#header {
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+
+    .top-header-container {
+        position: relative;
+    }
+
+    .profile-name {
+        font-weight: $bold;
+        font-size: 20px;
+    }
+
+    .back-icon {
+        font-size: 26px;
+        position: absolute;
+        left: 15px;
+        top: 0;
+        line-height: 28px;
+        cursor: pointer;
+    }
+
+}

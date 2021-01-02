@@ -1,0 +1,68 @@
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block ;
+}
+.inline-divs>div{
+    display: inline-block;
+}
+
+.inline-list li {
+    display: inline-block;
+}
+
+.block {
+    display: block;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center, .text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.relative {
+    position: relative;
+}
+.text-bold{
+    font-weight: $bold;
+}
+
+.awesome {
+    position: relative;
+    font-family: FontAwesome, sans-serif;
+}
+
+input, textarea {
+    -webkit-appearance: none;
+}
+strong{
+    font-weight: $bold;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.bg-white {
+    background-color: white;
+}

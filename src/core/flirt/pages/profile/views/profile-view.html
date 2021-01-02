@@ -1,0 +1,35 @@
+<main id="profile">
+    <div class="container-fluid">
+        <section class="profile-info">
+            <div class="photo">
+                <span class="status">{{profileStatus}}</span>
+                <a ui-sref="flirt.chat">
+                    <img class="img-responsive" src="{{profileInfo.image}}" alt="">
+                </a>
+            </div>
+            <div class="details">
+                <div class="clearfix">
+                    <div class="basic-data pull-left">
+                        <h5>{{profileInfo.name}}, {{profileInfo.yearsOld}}</h5>
+                        <span class="city block">{{profileInfo.city}}</span>
+                    </div>
+
+                    <!--Super Like Button-->
+                    <span class="super-like pull-right">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </span>
+
+                </div>
+
+                <!--Description-->
+                <div class="profile-description">
+                    {{profileInfo.description}}
+                </div>
+            </div>
+        </section>
+
+        <div id="add-as-friend" ng-class="{'is-friend': isMyFriend}">
+            <button ng-click="actionButton()">{{isMyFriend ? '¡Friends!': 'Add as friend'}}</button>
+        </div>
+    </div>
+</main>
