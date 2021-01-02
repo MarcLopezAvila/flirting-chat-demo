@@ -4,6 +4,4 @@
 
 Angular based flirting app demo chat.
 
-![alt text](./img/preview1.png)
-
-![alt text](./img/preview2.png)
+![alt text](./img/preview.jpg)
